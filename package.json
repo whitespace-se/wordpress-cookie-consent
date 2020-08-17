@@ -1,0 +1,23 @@
+{
+  "name": "@whitespace/wordpress-cookie-consent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Whitespace Dev <code@whitespace.se>",
+  "private": true,
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "build": "parcel build 'assets/src/*.js' -d assets/dist --no-source-maps",
+    "watch": "parcel watch 'assets/src/*.js' -d assets/dist",
+    "format": "prettier --write '**/*.{js,json,md,yml,php,inc}'"
+  },
+  "dependencies": {
+    "@whitespace/cookie-consent": "^3.0.1",
+    "sendbeacon-polyfill": "^1.0.0"
+  }
+}

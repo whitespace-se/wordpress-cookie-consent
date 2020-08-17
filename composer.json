@@ -1,0 +1,17 @@
+{
+    "name": "wpackagist-plugin/whitespace-cookie-consent",
+    "description": "Cookie consent dialog with tracking for Wordpress",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Whitespace Dev",
+            "email": "code@whitespace.se"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WhitespaceCookieConsent\\": "src"
+        }
+    }
+}
