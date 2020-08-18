@@ -21,6 +21,7 @@ class Database {
   }
 
   public function install() {
+    global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
 
     $sql = "CREATE TABLE $this->answer_table (
