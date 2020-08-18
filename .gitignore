@@ -3,5 +3,3 @@ node_modules
 
 # Enforce Yarn
 package-lock.json
-
-/vendor/
