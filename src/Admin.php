@@ -132,7 +132,7 @@ class Admin {
           isset($this->options['whitelist'])
             ? esc_attr(implode("\n", $this->options['whitelist']))
             : '',
-            sprintf(__('Add URLs to scripts that doesn’t require consent, one per row. Use %s to match parts of the URL, e.g. %s. Scripts on the same host as this website are always allowed.'), '<code>*</code>', '<code>https://unpkg.com/*</code>'),
+            sprintf(__('Add URLs to scripts that doesn’t require consent, one per row. Use %s to match parts of the URL, e.g. %s. Scripts on the same host as this website are always allowed.'), '<code>*</code>', '<code>https://unpkg.com/*</code>')
         );
       }, // callback
       'reading', // page
