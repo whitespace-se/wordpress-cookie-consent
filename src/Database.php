@@ -6,7 +6,7 @@ global $whitespace_cookie_consent_db_version;
 $whitespace_cookie_consent_db_version = '1';
 
 class Database {
-  public const DB_VERSION = '1';
+  const DB_VERSION = '1';
 
   protected $answer_table;
 
