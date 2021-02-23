@@ -1,5 +1,5 @@
 import "sendbeacon-polyfill";
-import { init } from "@whitespace/cookie-consent";
+import { init, getAnswer, ALLOW, DENY } from "@whitespace/cookie-consent";
 import "@whitespace/cookie-consent/dist/cookie-consent.css";
 
 const {
@@ -17,3 +17,8 @@ init({
     navigator.sendBeacon(trackingUrl, data);
   },
 });
+
+window.WHITESPACE_COOKIE_CONSENT_ALLOW = ALLOW;
+window.WHITESPACE_COOKIE_CONSENT_DENY = DENY;
+
+window.getWhitespaceCookieConsentAnswer = getAnswer;
