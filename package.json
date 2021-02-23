@@ -5,11 +5,11 @@
   "author": "Whitespace Dev <code@whitespace.se>",
   "private": true,
   "devDependencies": {
-    "@prettier/plugin-php": "^0.14.3",
+    "@prettier/plugin-php": "^0.16.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.6.0",
+    "eslint": "^7.20.0",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "build": "parcel build 'assets/src/*.js' -d assets/dist --no-source-maps",
@@ -17,7 +17,7 @@
     "format": "prettier --write '**/*.{js,json,md,yml,php,inc}'"
   },
   "dependencies": {
-    "@whitespace/cookie-consent": "^3.0.1",
+    "@whitespace/cookie-consent": "^3.1.0",
     "sendbeacon-polyfill": "^1.0.0"
   }
 }
