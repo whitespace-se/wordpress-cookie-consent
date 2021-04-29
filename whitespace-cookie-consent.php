@@ -13,6 +13,7 @@ use WhitespaceCookieConsent\Admin;
 use WhitespaceCookieConsent\Database;
 use WhitespaceCookieConsent\Plugin;
 use WhitespaceCookieConsent\Tracker;
+use WhitespaceCookieConsent\ExposeSettings;
 
 $base_url = plugin_dir_url(__FILE__);
 $base_path = plugin_dir_path(__FILE__);
@@ -30,3 +31,4 @@ Database::init($plugin);
 new Admin($plugin);
 new Plugin($plugin);
 new Tracker($plugin);
+new ExposeSettings($plugin);
