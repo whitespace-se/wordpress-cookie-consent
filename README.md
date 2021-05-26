@@ -11,7 +11,7 @@ Add this to your composer.json:
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:whitespace_se/wordpress-cookie-consent.git"
+      "url": "git@github.com:whitespace-se/wordpress-cookie-consent.git"
     }
   ]
 }

@@ -19,8 +19,8 @@ class Plugin {
 
     $options = get_option('whitespace_cookie_consent');
     $settings['currentLanguage'] = get_locale();
-    $settings['messages'][get_locale()] = $options['strings'];
-    $settings['whitelist'] = $options['whitelist'];
+    $settings['messages'][get_locale()] = !empty($options['strings'])?$options['strings']:[];
+    $settings['whitelist'] = !empty($options['whitelist'])?$options['whitelist']:[];
     $settings['trackingUrl'] = admin_url('admin-ajax.php');
     $settings['trackingActions']['answer'] =
       'whitespace_cookie_consent_track_answer';
