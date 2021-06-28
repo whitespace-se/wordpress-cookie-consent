@@ -13,6 +13,18 @@ class ExposeSettings {
       // Register all objects types
       register_graphql_object_type("WhitespaceCookieConsent", [
         "fields" => [
+          "active" => [
+            "type" => "Boolean",
+            "description" => __("", ""),
+            'resolve' => function ($source) {
+              return !empty($source['active']);
+              ;
+            },
+          ],
+          "position" => [
+            "type" => "String",
+            "description" => __("", ""),
+          ],
           "strings" => [
             "type" => 'WhitespaceCookieConsentStrings',
             "description" => __("", ""),

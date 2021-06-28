@@ -34,6 +34,52 @@ class Admin {
     );
 
     add_settings_field(
+      'active', // id
+      __('Activate cookie consent'), // title
+      function () {
+        printf(
+          '<input class="regular-text" type="checkbox" name="whitespace_cookie_consent[active]" id="active" %s value="1">',
+          empty($this->options['active'])
+            ? ''
+            : 'checked'
+        );
+      }, // callback
+      'reading', // page
+      'whitespace_cookie_consent' // section
+    );
+
+
+    add_settings_field(
+      'position', // id
+      __('Position cookie consent'), // title
+      function () {
+
+        $positions = [
+          "top" => "Top",
+          "topLeft" => "Top Left",
+          "topRight" => "Top Right",
+          "bottom" => "Bottom",
+          "bottomLeft" => "Bottom Left",
+          "bottomRight" => "Bottom Right"
+        ];
+
+        $string = '<select class="regular-text" type="checkbox" name="whitespace_cookie_consent[position]" id="position">';
+
+        foreach ($positions as $key => $value) {
+          $isChosenValue = !empty($this->options['position']) && $this->options['position'] == $key ? 'selected' : '';
+          $string .= '<option value="' . $key . '" '. $isChosenValue . '>' . $value . '</option>';
+        };
+
+        $string .= '</select>';
+
+        printf($string);
+      }, // callback
+      'reading', // page
+      'whitespace_cookie_consent' // section
+    );
+
+
+    add_settings_field(
       'title', // id
       __('Title'), // title
       function () {
@@ -149,6 +195,10 @@ class Admin {
   public function sanitize($input) {
     $sanitary_values = [];
     $sanitary_values['strings'] = [];
+    $sanitary_values['active'] = !empty($input['active']);
+    if (!empty($input['position'])) {
+      $sanitary_values['position'] = $input['position'];
+    }
     if (!empty($input['strings']['title'])) {
       $sanitary_values['strings']['title'] = $input['strings']['title'];
     }
