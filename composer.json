@@ -2,6 +2,7 @@
     "name": "wpackagist-plugin/whitespace-cookie-consent",
     "description": "Cookie consent dialog with tracking for Wordpress",
     "type": "wordpress-plugin",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Whitespace Dev",

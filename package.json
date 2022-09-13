@@ -1,6 +1,7 @@
 {
   "name": "@whitespace/wordpress-cookie-consent",
   "version": "1.0.2",
+  "license": "AGPL-3.0-or-later",
   "main": "index.js",
   "author": "Whitespace Dev <code@whitespace.se>",
   "private": true,
